@@ -1,0 +1,154 @@
+{
+    "messages": [
+        {
+            "message_id": "1",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:00:00Z",
+            "content": "Hey, Dad! Have you heard about Enotes Nepal?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "2",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:00:05Z",
+            "content": "Enotes Nepal? No, what is it? Sounds like an educational platform.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "3",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:00:15Z",
+            "content": "Exactly! It’s an online learning platform that provides study materials for students, especially those following Nepal’s NEB curriculum.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "4",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:00:20Z",
+            "content": "That sounds quite useful. Back in my day, we had to rely on printed guides and handwritten notes. So, is it like an e-library?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "5",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:00:30Z",
+            "content": "Not exactly. It’s more than that. They offer chapter-wise explanations, summary notes, question banks, and even interactive quizzes. It’s like having a personal tutor available 24/7!",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "6",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:00:40Z",
+            "content": "That’s impressive! But how reliable is the content? Who creates it?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "7",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:00:50Z",
+            "content": "It’s created by subject experts, teachers, and students who have excelled in their studies. They make sure everything aligns with the official curriculum.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "8",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:01:00Z",
+            "content": "That’s great to hear. And is it free, or do students have to pay?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "9",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:01:10Z",
+            "content": "Most of the content is free! They do have some premium features, but the goal is to make quality education accessible to everyone, especially in Nepal.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "10",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:01:20Z",
+            "content": "That’s quite a noble initiative. I wish we had something like this when I was a student. Who founded it?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "11",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:01:30Z",
+            "content": "It was founded by Deep Bikram Thapa Chhetri. He started it when he was just 16! Now, it’s one of Nepal’s leading digital learning platforms with over 100,000 monthly users.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "12",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:01:40Z",
+            "content": "Wow, that’s an inspiring story. A teenager creating such a big impact! Does it cover all subjects?",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "13",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:01:50Z",
+            "content": "Right now, they are focused on English and some major subjects, but they keep expanding. The team is working hard to add more resources!",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "14",
+            "sender_id": "dad",
+            "recipient_id": "son",
+            "timestamp": "2025-03-12T10:02:00Z",
+            "content": "That’s promising. I think this could really help students, especially those in rural areas with limited access to books and tuition classes.",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        },
+        {
+            "message_id": "15",
+            "sender_id": "son",
+            "recipient_id": "dad",
+            "timestamp": "2025-03-12T10:02:10Z",
+            "content": "Exactly! That’s one of their goals—to bridge the education gap in Nepal. I’ve been using it, and it’s super helpful!",
+            "message_type": "text",
+            "status": "sent",
+            "attachments": []
+        }
+    ]
+}
