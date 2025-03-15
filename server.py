@@ -16,7 +16,6 @@ if not api_key:
 # Configure Generative AI
 genai.configure(api_key=api_key)
 
-
 new_format_history = []
 
 def process_json_messages(json_filename):
@@ -24,7 +23,6 @@ def process_json_messages(json_filename):
         # Open and read the JSON file
         with open(json_filename, 'r') as json_file:
             data = json.load(json_file)
-         # List to store the new formatted messages
         
         # Process each message in the 'messages' array
         for message in data['messages']:
@@ -32,7 +30,7 @@ def process_json_messages(json_filename):
             if message['sender_id'] == 'son':
                 role = 'user'
             elif message['sender_id'] == 'dad':
-                role = 'model'
+                role = 'model'  # Using 'model' for consistency with Gemini API
             else:
                 continue  # If the sender is unknown, skip this message
             
@@ -40,24 +38,21 @@ def process_json_messages(json_filename):
             new_message = {
                 'role': role,
                 'parts': [
-                    {'text': message['content'] + '\n'}  # Add newline as required in the format
+                    {'text': message['content']}  # Removed the newline
                 ]
             }
             new_format_history.append(new_message)
-            # Append the new message to the formatted history list
-           
         
-        # Output the processed data to console (or use as needed)
+        print(f"Processed {len(new_format_history)} messages from {json_filename}")
         
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error processing JSON: {e}")
 
 # Specify the filename
 json_filename = 'old.json'  # The JSON file you want to process
 
 # Call the function to process the JSON messages
 process_json_messages(json_filename)
-
 
 # Set generation config
 generation_config = {
@@ -68,37 +63,45 @@ generation_config = {
     "response_mime_type": "text/plain",
 }
 
-# Create the model
+# Create the model with clearer system instructions
 model = genai.GenerativeModel(
     model_name="gemini-2.0-flash-exp", 
     generation_config=generation_config,
-    system_instruction="follow the chat history and the conversation should be done so that you should impersonate the history no change of things and always try to ask questions that initiate conversation"
+    system_instruction=(
+        "You are impersonating a father figure based on the chat history provided. "
+        "Maintain the same personality, tone, and conversational style shown in the history. "
+        "Ask questions that encourage meaningful conversation. "
+        "Do not break character or mention that you are an AI."
+    )
 )
 
 # Chat session
-chat_session = model.start_chat(history= new_format_history)
+chat_session = model.start_chat(history=new_format_history)
 
 async def chat_with_enotes(websocket):
     try:
         while True:
-            user_input = await websocket.recv()  # Receive input from client
-            print(f"User: {user_input}")  # Log user input
+            # Receive input from client
+            user_input = await websocket.recv()
+            print(f"User: {user_input}")
 
             # Generate response
-            response = chat_session.send_message(user_input)
-            print(f"User: {response.text}")   
-            await websocket.send(response.text)  # Send AI response
+            response = chat_session.send_message({"text": user_input})
+            ai_response = response.text
+            print(f"AI: {ai_response}")
+            
+            # Send AI response
+            await websocket.send(ai_response)
 
-            # Save chat history
-            chat_session.history.append({"role": "user", "parts": [user_input]})
-            chat_session.history.append({"role": "Assistant", "parts": [response.text]})
+            # No need to append to history as the chat_session handles this internally
+            # when using send_message()
 
             await asyncio.sleep(1)  # Prevent excessive looping
 
     except websockets.ConnectionClosed:
         print("Client disconnected. Waiting for a new connection...")
     except Exception as e:
-        print(f"Error: {e}")
+        print(f"Error in chat handler: {e}")
 
 async def main():
     print("WebSocket server running on ws://localhost:8765")
