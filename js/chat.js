@@ -111,6 +111,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize WebSocket connection
     connectWebSocket();
     
-    // Add welcome message
-    addMessage("Hello, I'm here for you. What would you like to talk about today?", false);
+   
 });
