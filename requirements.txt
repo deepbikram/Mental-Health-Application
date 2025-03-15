@@ -1,3 +1,6 @@
 google-generativeai>=0.3.0
 websockets>=11.0.3
 python-dotenv>=1.0.0
+
+
+ alert(`Speech recognition error: ${event.error}`);
