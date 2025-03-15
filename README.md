@@ -1,9 +1,3 @@
-deepbikram: Write Readme.md based on "A mental health app that allows users to "reconnect" with lost loved ones or past relationships by training an AI on their past conversations and voice messages. The AI can then chat and speak like them, offering emotional support, closure, or even guidance based on past interactions."
-
-Workspace: Collecting workspace information# ReConnect
-
-ReConnect is a mental health application that allows users to "reconnect" with lost loved ones or past relationships through AI. By training on past conversations and voice patterns, the AI can emulate communication with the person, offering emotional support, closure, and guidance based on previous interactions.
-
 ## Overview
 
 Losing a loved one or experiencing relationship loss can lead to emotional challenges. ReConnect provides a therapeutic environment where users can continue meaningful conversations with an AI representation of their lost connection, helping them process grief, find closure, or maintain a sense of connection.
