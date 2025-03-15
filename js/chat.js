@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Expose isTyping globally for other modules to use
     window.isTyping = isTyping;
+
     // Connect to WebSocket server
     function connectWebSocket() {
         socket = new WebSocket('ws://localhost:8765');
@@ -30,6 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 isTyping = false;
             }
             addMessage(event.data, false);
+            // Speak the AI response
+            if (window.speakText && typeof window.speakText === 'function') {
+                window.speakText(event.data);
+            }
         };
         
         socket.onclose = () => {
@@ -43,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
             sendBtn.disabled = true;
         };
     }
-    // Function to add messages to chat
+
     // Function to add messages to chat
     function addMessage(text, isUser) {
         const messageDiv = document.createElement('div');
@@ -53,9 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
         chatMessages.appendChild(messageDiv);
         chatMessages.scrollTop = chatMessages.scrollHeight;
     }
-    
+
     // Make addMessage available globally
     window.addMessage = addMessage;
+
+    // Function to show typing indicator
     function showTypingIndicator() {
         const indicatorDiv = document.createElement('div');
         indicatorDiv.className = 'typing-indicator';
@@ -110,6 +117,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initialize WebSocket connection
     connectWebSocket();
-    
-   
 });
