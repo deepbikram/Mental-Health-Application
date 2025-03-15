@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body class="bg-gray-100">
+    <div class="voice-assistant-container flex flex-col items-center justify-center min-h-screen p-4">
+        <div class="voice-assistant-header mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Voice Assistant</h1>
+        </div>
+        <div class="voice-assistant-content bg-white shadow-lg rounded-lg p-8 w-full max-w-md text-center">
+            <div class="ai-response mb-8 text-lg text-gray-600" id="aiResponse">AI response will appear here...</div>
+            <div class="voice-circle mb-8">
+                <button id="voiceBtn" class="btn btn-voice">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                    </svg>
+                </button>
+            </div>
+            <div class="voice-controls">
+                <button id="cancelBtn" class="btn btn-cancel">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript files -->
+    <script src="js/voice-assistant.js"></script>
+</body>
+</html>

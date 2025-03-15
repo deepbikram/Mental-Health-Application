@@ -47,20 +47,13 @@
         </div>
     </div>
 
-    <div class="voice-container" id="voiceContainer">
-        <div class="ai-response" id="aiResponse">AI response will appear here...</div>
-        <div class="voice-circle" id="voiceCircle">
-            <button id="stopVoiceBtn" class="btn btn-voice">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-            </button>
-        </div>
-    </div>
-
     <!-- Load JavaScript files -->
     <script src="js/chat.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/voice.js"></script>
+    <script>
+        document.getElementById('voiceBtn').addEventListener('click', () => {
+            window.location.href = 'voice-assistant.html';
+        });
+    </script>
 </body>
 </html>
